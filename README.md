@@ -238,3 +238,7 @@ examples/       sample texts (Spanish and English)
 > `.venv` as hidden, and Python 3.12+ then ignores the editable-install `.pth`
 > file (`ModuleNotFoundError: argmining`). Keep the environment in a folder iCloud
 > skips: `UV_PROJECT_ENVIRONMENT=.venv.nosync uv sync && ln -s .venv.nosync .venv`.
+
+## License
+
+Code released under the [MIT License](LICENSE). The AAE corpus used for evaluation is not part of this repository and keeps its own licence (research use only).

@@ -3,6 +3,9 @@ name = "argument-mining-langchain"
 version = "0.1.0"
 description = "Multi-agent argument mining with LangChain + LangGraph: premises, conclusions, argumentation schemes and fallacies from raw text."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Andrés Nicolás Uranga Limón" }]
 requires-python = ">=3.11"
 dependencies = [
     "httpx>=0.28.1",
