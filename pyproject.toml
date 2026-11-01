@@ -1,0 +1,37 @@
+[project]
+name = "argument-mining-langchain"
+version = "0.1.0"
+description = "Multi-agent argument mining with LangChain + LangGraph: premises, conclusions, argumentation schemes and fallacies from raw text."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain-core>=1.7.3",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.19",
+    "networkx>=3.6.1",
+    "pydantic>=2.14.2",
+    "streamlit>=1.66.1",
+]
+
+[project.scripts]
+argmine = "argmining.cli:main"
+argmine-eval = "argmining.eval.run:main"
+argmine-app = "argmining.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/argmining"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["ollama: needs a running Ollama server (set RUN_OLLAMA_TESTS=1)"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
